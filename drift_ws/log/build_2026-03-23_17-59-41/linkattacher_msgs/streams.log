@@ -1,0 +1,280 @@
+[0.008s] Invoking command in '/home/vidya/drift_ws/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/linkattacher_msgs -DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/install/linkattacher_msgs
+[0.048s] -- The C compiler identification is GNU 11.4.0
+[0.112s] -- The CXX compiler identification is GNU 11.4.0
+[0.118s] -- Detecting C compiler ABI info
+[0.200s] -- Detecting C compiler ABI info - done
+[0.209s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.209s] -- Detecting C compile features
+[0.210s] -- Detecting C compile features - done
+[0.213s] -- Detecting CXX compiler ABI info
+[0.284s] -- Detecting CXX compiler ABI info - done
+[0.290s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.290s] -- Detecting CXX compile features
+[0.291s] -- Detecting CXX compile features - done
+[0.292s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.399s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.456s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.509s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.510s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.514s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.540s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.700s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.833s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.007s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.023s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.024s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.051s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.051s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.051s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.051s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.075s] -- Found PythonExtra: .so  
+[1.140s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.141s] -- Added test 'lint_cmake' to check CMake code style
+[1.142s] -- Added test 'xmllint' to check XML markup files
+[1.144s] -- Configuring done
+[1.160s] -- Generating done
+[1.166s] -- Build files have been written to: /home/vidya/drift_ws/build/linkattacher_msgs
+[1.171s] Invoked command in '/home/vidya/drift_ws/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/linkattacher_msgs -DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/install/linkattacher_msgs
+[1.173s] Invoking command in '/home/vidya/drift_ws/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vidya/drift_ws/build/linkattacher_msgs -- -j16 -l16
+[1.208s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.213s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.213s] [  7%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[1.221s] [  7%] Built target ament_cmake_python_copy_linkattacher_msgs
+[1.377s] running egg_info
+[1.378s] creating linkattacher_msgs.egg-info
+[1.378s] writing linkattacher_msgs.egg-info/PKG-INFO
+[1.378s] writing dependency_links to linkattacher_msgs.egg-info/dependency_links.txt
+[1.378s] writing top-level names to linkattacher_msgs.egg-info/top_level.txt
+[1.379s] writing manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'
+[1.380s] reading manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'
+[1.380s] writing manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'
+[1.398s] [  7%] Built target ament_cmake_python_build_linkattacher_msgs_egg
+[1.443s] [  7%] Built target linkattacher_msgs__rs
+[1.491s] [  7%] Built target linkattacher_msgs__cpp
+[1.492s] [ 10%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_c.dir/rosidl_generator_c/linkattacher_msgs/srv/detail/attach_link__functions.c.o[0m
+[1.496s] [ 12%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_c.dir/rosidl_generator_c/linkattacher_msgs/srv/detail/detach_link__functions.c.o[0m
+[1.498s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.498s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.499s] [ 20%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.541s] [ 22%] [32m[1mLinking C shared library liblinkattacher_msgs__rosidl_generator_c.so[0m
+[1.576s] [ 22%] Built target linkattacher_msgs__rosidl_generator_c
+[1.582s] [ 27%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.582s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.585s] [ 30%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.753s] [ 32%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/linkattacher_msgs/srv/detach_link__type_support.cpp.o[0m
+[1.755s] [ 35%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/linkattacher_msgs/srv/attach_link__type_support.cpp.o[0m
+[1.756s] [ 37%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/linkattacher_msgs/srv/detail/detach_link__type_support.cpp.o[0m
+[1.760s] [ 40%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/linkattacher_msgs/srv/detail/attach_link__type_support.cpp.o[0m
+[1.771s] [ 42%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/linkattacher_msgs/srv/detail/dds_fastrtps/detach_link__type_support.cpp.o[0m
+[1.774s] [ 45%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/linkattacher_msgs/srv/detail/dds_fastrtps/attach_link__type_support.cpp.o[0m
+[1.820s] [ 47%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/linkattacher_msgs/srv/attach_link__type_support.cpp.o[0m
+[1.821s] [ 50%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/linkattacher_msgs/srv/detach_link__type_support.cpp.o[0m
+[1.840s] [ 52%] [32m[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_c.so[0m
+[1.844s] [ 57%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/linkattacher_msgs/srv/detail/detach_link__type_support.c.o[0m
+[1.844s] [ 57%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/linkattacher_msgs/srv/detail/attach_link__type_support.c.o[0m
+[1.851s] [ 60%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/linkattacher_msgs/srv/detail/attach_link__type_support_c.cpp.o[0m
+[1.853s] [ 62%] [32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/linkattacher_msgs/srv/detail/detach_link__type_support_c.cpp.o[0m
+[1.865s] [ 62%] Built target linkattacher_msgs__rosidl_typesupport_c
+[1.865s] [ 65%] [32m[1mLinking C shared library liblinkattacher_msgs__rosidl_typesupport_introspection_c.so[0m
+[1.884s] [ 65%] Built target linkattacher_msgs__rosidl_typesupport_introspection_c
+[1.983s] [ 67%] [32m[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_cpp.so[0m
+[1.993s] [ 70%] [32m[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.016s] [ 70%] Built target linkattacher_msgs__rosidl_typesupport_cpp
+[2.036s] [ 70%] Built target linkattacher_msgs__rosidl_typesupport_introspection_cpp
+[2.062s] [ 72%] [32m[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[2.111s] [ 72%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_c
+[2.123s] [ 75%] [32m[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.177s] [ 75%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_cpp
+[2.199s] [ 75%] Built target linkattacher_msgs
+[2.222s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.659s] [ 77%] Built target linkattacher_msgs__py
+[2.679s] [ 80%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_py.dir/rosidl_generator_py/linkattacher_msgs/srv/_attach_link_s.c.o[0m
+[2.679s] [ 82%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_py.dir/rosidl_generator_py/linkattacher_msgs/srv/_detach_link_s.c.o[0m
+[2.755s] [ 85%] [32m[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/liblinkattacher_msgs__rosidl_generator_py.so[0m
+[2.798s] [ 85%] Built target linkattacher_msgs__rosidl_generator_py
+[2.820s] [ 87%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.822s] [ 90%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[2.823s] [ 92%] [32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.886s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.886s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.893s] [100%] [32m[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.913s] [100%] Built target linkattacher_msgs__rosidl_typesupport_c__pyext
+[2.913s] [100%] Built target linkattacher_msgs__rosidl_typesupport_introspection_c__pyext
+[2.917s] [100%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_c__pyext
+[2.925s] Invoked command in '/home/vidya/drift_ws/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/vidya/drift_ws/build/linkattacher_msgs -- -j16 -l16
+[2.926s] Invoking command in '/home/vidya/drift_ws/build/linkattacher_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vidya/drift_ws/build/linkattacher_msgs
+[2.932s] -- Install configuration: ""
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.srv
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.srv
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/rosidl_interfaces/linkattacher_msgs
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detach_link.h
+[2.932s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__functions.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__struct.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__struct.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__functions.c
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__functions.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__functions.c
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/attach_link.h
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/library_path.sh
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/library_path.dsv
+[2.933s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_c.so
+[2.933s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_c.so" to ""
+[2.933s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[2.933s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.934s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[2.934s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_fastrtps_c.h
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_fastrtps_c.h
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so
+[2.934s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[2.934s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[2.934s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.934s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[2.934s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.c
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_introspection_c.h
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.c
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_introspection_c.h
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_c.so
+[2.934s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_c.so" to ""
+[2.934s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_c.so
+[2.934s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_c.so" to ""
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__builder.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__traits.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__builder.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__struct.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__traits.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__struct.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detach_link.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/attach_link.hpp
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[2.935s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_fastrtps_cpp.hpp
+[2.935s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_fastrtps_cpp.hpp
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/dds_fastrtps
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.936s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.936s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs
+[2.936s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv
+[2.936s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_introspection_cpp.hpp
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_introspection_cpp.hpp
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.cpp
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.cpp
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so
+[2.936s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_cpp.so
+[2.936s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_cpp.so" to ""
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/pythonpath.sh
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/pythonpath.dsv
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info
+[2.936s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/__init__.py
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/liblinkattacher_msgs__rosidl_generator_py.so
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/__init__.py
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link_s.c
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link.py
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link_s.c
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link.py
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_c.c
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.937s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[2.961s] Listing '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs'...
+[2.961s] Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/__init__.py'...
+[2.961s] Listing '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv'...
+[2.961s] Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/__init__.py'...
+[2.961s] Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link.py'...
+[2.962s] Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link.py'...
+[2.964s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.964s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.965s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.965s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_py.so
+[2.965s] -- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_py.so" to ""
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/rust_packages/linkattacher_msgs
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/Cargo.toml
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv/rmw.rs
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/lib.rs
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv.rs
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/build.rs
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.idl
+[2.965s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.idl
+[2.965s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.srv
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink_Request.msg
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink_Response.msg
+[2.966s] -- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.srv
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink_Request.msg
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink_Response.msg
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/package_run_dependencies/linkattacher_msgs
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/parent_prefix_path/linkattacher_msgs
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/ament_prefix_path.sh
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/ament_prefix_path.dsv
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/path.sh
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/path.dsv
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.bash
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.sh
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.zsh
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.dsv
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/package.dsv
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/packages/linkattacher_msgs
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cExport.cmake
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.966s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cppExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cppExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_pyExport.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake-extras.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.967s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.968s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.968s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgsConfig.cmake
+[2.968s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgsConfig-version.cmake
+[2.968s] -- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/package.xml
+[2.970s] Invoked command in '/home/vidya/drift_ws/build/linkattacher_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/vidya/drift_ws/build/linkattacher_msgs

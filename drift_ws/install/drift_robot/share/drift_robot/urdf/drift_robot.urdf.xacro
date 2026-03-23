@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<robot name="drift_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- ============================================================
+       MATERIAL DEFINITIONS
+       Colour palette:
+         white     — body panels, arm segments
+         blue      — joint spheres, gripper base
+         black     — wheels, face display
+         gray      — camera body
+         dark_blue — LiDAR
+  ============================================================ -->
+  <material name="white">
+    <color rgba="0.95 0.95 0.95 1.0"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.1 0.4 0.8 1.0"/>
+  </material>
+  <material name="black">
+    <color rgba="0.05 0.05 0.05 1.0"/>
+  </material>
+  <material name="gray">
+    <color rgba="0.50 0.50 0.50 1.0"/>
+  </material>
+  <material name="dark_blue">
+    <color rgba="0.0 0.05 0.35 1.0"/>
+  </material>
+
+  <!-- ============================================================
+       INERTIA MACROS
+  ============================================================ -->
+  <!-- cx/cy/cz: centre-of-mass offset from link origin (must match visual centre) -->
+  <xacro:macro name="box_inertia" params="m x y z cx:=0 cy:=0 cz:=0">
+    <inertial>
+      <mass value="${m}"/>
+      <origin xyz="${cx} ${cy} ${cz}" rpy="0 0 0"/>
+      <inertia
+        ixx="${m*(y*y+z*z)/12}" ixy="0" ixz="0"
+        iyy="${m*(x*x+z*z)/12}" iyz="0"
+        izz="${m*(x*x+y*y)/12}"/>
+    </inertial>
+  </xacro:macro>
+
+  <xacro:macro name="cylinder_inertia" params="m r h">
+    <inertial>
+      <mass value="${m}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia
+        ixx="${m*(3*r*r+h*h)/12}" ixy="0" ixz="0"
+        iyy="${m*(3*r*r+h*h)/12}" iyz="0"
+        izz="${m*r*r/2}"/>
+    </inertial>
+  </xacro:macro>
+
+  <!-- ============================================================
+       BASE
+  ============================================================ -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child  link="base_link"/>
+    <!-- offset = wheel radius (0.08 m) so base_link sits at axle height
+         and wheel bottoms land exactly on the ground plane -->
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Chassis: 0.56 × 0.46 × 0.16 m, 23 kg -->
+  <link name="base_link">
+    <xacro:box_inertia m="23.0" x="0.56" y="0.46" z="0.16" cz="0.08"/>
+    <visual>
+      <origin xyz="0 0 0.08" rpy="0 0 0"/>
+      <geometry><box size="0.56 0.46 0.16"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.08" rpy="0 0 0"/>
+      <geometry><box size="0.56 0.46 0.16"/></geometry>
+    </collision>
+  </link>
+
+  <!-- ============================================================
+       WHEELS  — radius 0.08 m, width 0.05 m, mass 1.6 kg
+  ============================================================ -->
+  <xacro:macro name="wheel" params="name x_pos y_pos">
+    <link name="${name}_link">
+      <xacro:cylinder_inertia m="1.6" r="0.08" h="0.05"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <geometry><cylinder radius="0.08" length="0.05"/></geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <geometry><cylinder radius="0.08" length="0.05"/></geometry>
+      </collision>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child  link="${name}_link"/>
+      <!-- z=0: wheel centre is at base_link origin = wheel radius above ground -->
+      <origin xyz="${x_pos} ${y_pos} 0" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="30.0" velocity="20.0"/>
+      <dynamics damping="0.2" friction="0.12"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel name="left_front_wheel"  x_pos=" 0.19" y_pos=" 0.24"/>
+  <xacro:wheel name="right_front_wheel" x_pos=" 0.19" y_pos="-0.24"/>
+  <xacro:wheel name="left_rear_wheel"   x_pos="-0.19" y_pos=" 0.24"/>
+  <xacro:wheel name="right_rear_wheel"  x_pos="-0.19" y_pos="-0.24"/>
+
+  <!-- ============================================================
+       TORSO  — 0.24 × 0.18 × 0.52 m, 10 kg
+  ============================================================ -->
+  <link name="torso_link">
+    <xacro:box_inertia m="10.0" x="0.24" y="0.18" z="0.52" cz="0.26"/>
+    <visual>
+      <origin xyz="0 0 0.26" rpy="0 0 0"/>
+      <geometry><box size="0.24 0.18 0.52"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.26" rpy="0 0 0"/>
+      <geometry><box size="0.24 0.18 0.52"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="torso_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="torso_link"/>
+    <origin xyz="0 0 0.16" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================================================
+       FACE / DISPLAY PANEL  — black LED screen on the FRONT (+X) face
+       Torso front face is at X = +0.12 from torso origin.
+       Panel is 2 cm thick (X), spans torso width in Y, upper section.
+  ============================================================ -->
+  <link name="head_panel_link">
+    <xacro:box_inertia m="0.6" x="0.02" y="0.20" z="0.16"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.02 0.20 0.16"/></geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.02 0.20 0.16"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="head_panel_joint" type="fixed">
+    <parent link="torso_link"/>
+    <child  link="head_panel_link"/>
+    <!-- Lidar sits at Z=0.47 in torso frame (top edge Z=0.49).
+         Panel bottom starts at Z=0.50, centre at Z=0.58, so it sits
+         cleanly above the lidar with no overlap. -->
+    <origin xyz="0.13 0 0.58" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================================================
+       CAMERA  — gray sensor block on front of torso
+  ============================================================ -->
+  <link name="camera_link">
+    <xacro:box_inertia m="0.25" x="0.05" y="0.05" z="0.04"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.05 0.05 0.04"/></geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.05 0.05 0.04"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="torso_link"/>
+    <child  link="camera_link"/>
+    <origin xyz="0.14 0 0.30" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Camera optical frame (ROS convention: z-forward, x-right, y-down) -->
+  <link name="camera_optical_link"/>
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child  link="camera_optical_link"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+  </joint>
+
+  <!-- ============================================================
+       LIDAR  — dark-blue cylinder on top of torso
+  ============================================================ -->
+  <link name="lidar_link">
+    <xacro:cylinder_inertia m="0.35" r="0.04" h="0.04"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.04" length="0.04"/></geometry>
+      <material name="dark_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><cylinder radius="0.04" length="0.04"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="torso_link"/>
+    <child  link="lidar_link"/>
+    <origin xyz="0.12 0 0.47" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================================================
+       RIGHT ARM  — 3-DOF active arm
+       Joint chain: shoulder (Z-rot) → elbow (Y-rot) → wrist (Y-rot)
+       Spring references enforce V-pose at rest:
+         shoulder ≈ 0 rad  (arm hangs at side, rotated forward slightly)
+         elbow    ≈ -1.5 rad (upper arm angled down)
+         wrist    ≈  0.8 rad (forearm angled back up → "V")
+  ============================================================ -->
+
+  <!-- Shoulder ball (blue) -->
+  <link name="right_shoulder_link">
+    <xacro:box_inertia m="1.4" x="0.08" y="0.08" z="0.08"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.045"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.045"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_shoulder_joint" type="revolute">
+    <parent link="torso_link"/>
+    <child  link="right_shoulder_link"/>
+    <origin xyz="0.12 -0.14 0.36" rpy="0 0 3.1416"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.4" upper="2.4" effort="20.0" velocity="1.8"/>
+    <dynamics damping="1.0" friction="0.4"/>
+  </joint>
+
+  <!-- Upper arm (white) — hangs below shoulder -->
+  <link name="right_upper_arm_link">
+    <xacro:box_inertia m="1.5" x="0.06" y="0.06" z="0.28" cz="-0.14"/>
+    <visual>
+      <origin xyz="0 0 -0.14" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.06 0.28"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.14" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.06 0.28"/></geometry>
+    </collision>
+  </link>
+
+  <!-- Elbow joint: parent frame rotated 90° in Y so the arm initially
+       points straight down; spring pulls it to -1.5 rad (V elbow bend) -->
+  <joint name="right_elbow_joint" type="revolute">
+    <parent link="right_shoulder_link"/>
+    <child  link="right_upper_arm_link"/>
+    <origin xyz="0 0 0" rpy="0 1.5708 0"/>   <!-- THIS, not X rotation -->
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.4" upper="1.4" effort="18.0" velocity="2.0"/>
+    <dynamics damping="0.8" friction="0.3"/>
+  </joint>
+
+  <!-- Elbow ball (blue) — visual marker at bottom of upper arm -->
+  <link name="right_elbow_vis_link">
+    <xacro:cylinder_inertia m="0.05" r="0.035" h="0.04"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.038"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.038"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_elbow_vis_joint" type="fixed">
+    <parent link="right_upper_arm_link"/>
+    <child  link="right_elbow_vis_link"/>
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Forearm (white) -->
+  <link name="right_forearm_link">
+    <xacro:box_inertia m="1.2" x="0.05" y="0.05" z="0.24" cz="-0.12"/>
+    <visual>
+      <origin xyz="0 0 -0.12" rpy="0 0 0"/>
+      <geometry><box size="0.05 0.05 0.24"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.12" rpy="0 0 0"/>
+      <geometry><box size="0.05 0.05 0.24"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_wrist_joint" type="revolute">
+    <parent link="right_upper_arm_link"/>
+    <child  link="right_forearm_link"/>
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.6" upper="2.6" effort="12.0" velocity="2.4"/>
+    <dynamics damping="0.5" friction="0.25"/>
+  </joint>
+
+  <!-- Wrist ball (blue) -->
+  <link name="right_wrist_vis_link">
+    <xacro:cylinder_inertia m="0.05" r="0.025" h="0.04"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.030"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.030"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_wrist_vis_joint" type="fixed">
+    <parent link="right_forearm_link"/>
+    <child  link="right_wrist_vis_link"/>
+    <origin xyz="0 0 -0.24" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================================================
+       FUNCTIONAL PARALLEL-JAW GRIPPER
+       The gripper base (blue) is fixed to the forearm tip.
+       Two fingers slide along Y (±) via prismatic joints:
+         open  = 0.05 m gap on each side
+         closed = 0.00 m (spring-held default)
+       Control via /arm_trajectory (trajectory_msgs/JointTrajectory).
+  ============================================================ -->
+
+  <!-- Gripper palm / base (blue) -->
+  <link name="right_gripper_link">
+    <xacro:box_inertia m="0.4" x="0.06" y="0.10" z="0.04"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.10 0.04"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.10 0.04"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_gripper_joint" type="fixed">
+    <parent link="right_forearm_link"/>
+    <child  link="right_gripper_link"/>
+    <!-- rpy pitch = pi/2 rotates the gripper palm 90° so the jaw
+         opening faces outward (away from the arm) instead of downward -->
+    <origin xyz="0 0 -0.24" rpy="0 ${pi/2} 0"/>
+  </joint>
+
+  <!-- Left finger — slides in +Y to open -->
+  <link name="right_finger_l_link">
+    <xacro:box_inertia m="0.08" x="0.14" y="0.025" z="0.025"/>
+    <visual>
+      <origin xyz="0.07 0 -0.025" rpy="0 0 0"/>
+      <geometry><box size="0.14 0.025 0.025"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0.07 0 -0.025" rpy="0 0 0"/>
+      <geometry><box size="0.14 0.025 0.025"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_finger_l_joint" type="prismatic">
+    <parent link="right_gripper_link"/>
+    <child  link="right_finger_l_link"/>
+    <origin xyz="0  0.04 -0.02" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0.0" upper="0.05" effort="10.0" velocity="0.1"/>
+    <dynamics damping="5.0" friction="1.0"/>
+  </joint>
+
+  <!-- Right finger — slides in -Y to open -->
+  <link name="right_finger_r_link">
+    <xacro:box_inertia m="0.08" x="0.14" y="0.025" z="0.025"/>
+    <visual>
+      <origin xyz="0.07 0 -0.025" rpy="0 0 0"/>
+      <geometry><box size="0.14 0.025 0.025"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0.07 0 -0.025" rpy="0 0 0"/>
+      <geometry><box size="0.14 0.025 0.025"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="right_finger_r_joint" type="prismatic">
+    <parent link="right_gripper_link"/>
+    <child  link="right_finger_r_link"/>
+    <origin xyz="0 -0.04 -0.02" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="0.0" upper="0.05" effort="10.0" velocity="0.1"/>
+    <dynamics damping="5.0" friction="1.0"/>
+  </joint>
+
+  <!-- ============================================================
+       LEFT ARM  — cosmetic / static (mirrored)
+  ============================================================ -->
+  <link name="left_arm_cosmetic_link">
+    <xacro:box_inertia m="1.4" x="0.06" y="0.06" z="0.26" cz="-0.13"/>
+    <visual>
+      <origin xyz="0 0 -0.13" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.06 0.26"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.13" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.06 0.26"/></geometry>
+    </collision>
+  </link>
+
+  <!-- Left shoulder ball (blue) -->
+  <link name="left_shoulder_vis_link">
+    <xacro:cylinder_inertia m="0.1" r="0.04" h="0.08"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.045"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><sphere radius="0.045"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="left_shoulder_vis_joint" type="fixed">
+    <parent link="torso_link"/>
+    <child  link="left_shoulder_vis_link"/>
+    <origin xyz="0 0.14 0.36" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="left_arm_cosmetic_joint" type="fixed">
+    <parent link="left_shoulder_vis_link"/>
+    <child  link="left_arm_cosmetic_link"/>
+    <!-- Slight V-angle to match right arm aesthetic -->
+    <origin xyz="0 0 0" rpy="0 0.3 0"/>
+  </joint>
+
+  <!-- Left hand (white) -->
+  <link name="left_hand_link">
+    <xacro:box_inertia m="0.2" x="0.10" y="0.06" z="0.03"/>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.10 0.06 0.03"/></geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.10 0.06 0.03"/></geometry>
+    </collision>
+  </link>
+
+  <joint name="left_hand_joint" type="fixed">
+    <parent link="left_arm_cosmetic_link"/>
+    <child  link="left_hand_link"/>
+    <origin xyz="0 0 -0.26" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ============================================================
+       GAZEBO: WHEEL FRICTION
+  ============================================================ -->
+  <gazebo reference="left_front_wheel_link"><mu1>1.1</mu1><mu2>1.1</mu2><kp>1e6</kp><kd>1.0</kd></gazebo>
+  <gazebo reference="right_front_wheel_link"><mu1>1.1</mu1><mu2>1.1</mu2><kp>1e6</kp><kd>1.0</kd></gazebo>
+  <gazebo reference="left_rear_wheel_link"><mu1>1.1</mu1><mu2>1.1</mu2><kp>1e6</kp><kd>1.0</kd></gazebo>
+  <gazebo reference="right_rear_wheel_link"><mu1>1.1</mu1><mu2>1.1</mu2><kp>1e6</kp><kd>1.0</kd></gazebo>
+
+  <!-- ============================================================
+       GAZEBO: DRIVE PLUGIN
+       libgazebo_ros_skid_steer_drive.so does NOT ship with ROS2 Humble.
+       Two diff-drive instances are used instead — one per axle —
+       both subscribing to /cmd_vel for identical 4WD behaviour.
+       Only the FRONT plugin publishes /odom and the odom→base_footprint
+       TF to avoid duplicates.
+  ============================================================ -->
+
+  <!-- Front axle: publishes /odom + TF -->
+  <gazebo>
+    <plugin name="diff_drive_front" filename="libgazebo_ros_diff_drive.so">
+      <ros><namespace>/</namespace></ros>
+      <left_joint>left_front_wheel_joint</left_joint>
+      <right_joint>right_front_wheel_joint</right_joint>
+      <wheel_separation>0.48</wheel_separation>
+      <wheel_diameter>0.16</wheel_diameter>
+      <max_wheel_torque>28</max_wheel_torque>
+      <max_wheel_acceleration>2.0</max_wheel_acceleration>
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+      <update_rate>50</update_rate>
+    </plugin>
+  </gazebo>
+
+  <!-- Rear axle: follows same cmd_vel, no duplicate odom/TF -->
+  <gazebo>
+    <plugin name="diff_drive_rear" filename="libgazebo_ros_diff_drive.so">
+      <ros><namespace>/</namespace></ros>
+      <left_joint>left_rear_wheel_joint</left_joint>
+      <right_joint>right_rear_wheel_joint</right_joint>
+      <wheel_separation>0.48</wheel_separation>
+      <wheel_diameter>0.16</wheel_diameter>
+      <max_wheel_torque>28</max_wheel_torque>
+      <max_wheel_acceleration>2.0</max_wheel_acceleration>
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom_rear</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <publish_odom>false</publish_odom>
+      <publish_odom_tf>false</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+      <update_rate>50</update_rate>
+    </plugin>
+  </gazebo>
+
+  <!-- ============================================================
+       GAZEBO: CAMERA SENSOR
+  ============================================================ -->
+  <gazebo reference="camera_link">
+    <sensor name="front_camera_sensor" type="camera">
+      <always_on>true</always_on>
+      <update_rate>15.0</update_rate>
+      <camera>
+        <horizontal_fov>1.2217</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>25.0</far>
+        </clip>
+      </camera>
+      <plugin name="gazebo_ros_camera" filename="libgazebo_ros_camera.so">
+        <ros>
+          <namespace>/</namespace>
+          <remapping>image_raw:=camera/image_raw</remapping>
+          <remapping>camera_info:=camera/camera_info</remapping>
+        </ros>
+        <frame_name>camera_optical_link</frame_name>
+        <camera_name>torso_camera</camera_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ============================================================
+       GAZEBO: LIDAR SENSOR
+  ============================================================ -->
+  <gazebo reference="lidar_link">
+    <sensor name="lidar_sensor" type="ray">
+      <always_on>true</always_on>
+      <update_rate>12.0</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.5708</min_angle>
+            <max_angle>1.5708</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_lidar" filename="libgazebo_ros_ray_sensor.so">
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_link</frame_name>
+        <topic_name>scan</topic_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- ============================================================
+       GAZEBO: JOINT STATE PUBLISHER
+       Publishes live positions for all active joints incl. gripper.
+  ============================================================ -->
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/out:=joint_states</remapping>
+      </ros>
+      <update_rate>50</update_rate>
+      <joint_name>right_shoulder_joint</joint_name>
+      <joint_name>right_elbow_joint</joint_name>
+      <joint_name>right_wrist_joint</joint_name>
+      <joint_name>right_finger_l_joint</joint_name>
+      <joint_name>right_finger_r_joint</joint_name>
+      <joint_name>left_front_wheel_joint</joint_name>
+      <joint_name>right_front_wheel_joint</joint_name>
+      <joint_name>left_rear_wheel_joint</joint_name>
+      <joint_name>right_rear_wheel_joint</joint_name>
+    </plugin>
+  </gazebo>
+
+  <!-- ============================================================
+       GAZEBO: ARM + GRIPPER TRAJECTORY CONTROLLER
+       Send trajectory_msgs/JointTrajectory to /arm_trajectory to
+       command shoulder, elbow, wrist, and both gripper fingers.
+  ============================================================ -->
+  <gazebo>
+    <plugin name="arm_trajectory_controller"
+            filename="libgazebo_ros_joint_pose_trajectory.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/in:=arm_trajectory</remapping>
+      </ros>
+      <update_rate>50</update_rate>
+      <frame_id>base_footprint</frame_id>
+    </plugin>
+  </gazebo>
+
+  <!-- ============================================================
+       GAZEBO: V-POSE SPRING DAMPERS  (arm rests in V at startup)
+       shoulder → small forward tuck
+       elbow    → strong downward bend (-1.5 rad)
+       wrist    → wrist curls back (+0.8 rad) completing the V
+       fingers  → stay closed (springReference = 0)
+  ============================================================ -->
+<gazebo reference="right_shoulder_joint">
+  <implicitSpringDamper>true</implicitSpringDamper>
+  <springStiffness>50.0</springStiffness>
+  <springReference>0.8</springReference>  <!-- forward, not sideways -->
+</gazebo>
+
+<gazebo reference="right_elbow_joint">
+  <implicitSpringDamper>true</implicitSpringDamper>
+  <springStiffness>50.0</springStiffness>
+  <springReference>-1.4</springReference>  <!-- bend elbow -->
+</gazebo>
+
+<gazebo reference="right_wrist_joint">
+  <implicitSpringDamper>true</implicitSpringDamper>
+  <springStiffness>50.0</springStiffness>
+  <springReference>0.6</springReference>   <!-- bring hand forward -->
+</gazebo>
+
+  <!-- Fingers: light spring, stay closed -->
+  <gazebo reference="right_finger_l_joint">
+    <implicitSpringDamper>true</implicitSpringDamper>
+    <springStiffness>5</springStiffness>
+    <springReference>0.0</springReference>
+  </gazebo>
+
+  <gazebo reference="right_finger_r_joint">
+    <implicitSpringDamper>true</implicitSpringDamper>
+    <springStiffness>5</springStiffness>
+    <springReference>0.0</springReference>
+  </gazebo>
+
+  <!-- ============================================================
+       GAZEBO: VISUAL MATERIAL COLOURS
+  ============================================================ -->
+
+  <!-- Body — white, self_collide disabled so arm never causes physics explosion -->
+  <gazebo reference="base_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+  <gazebo reference="torso_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+  <gazebo reference="left_arm_cosmetic_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+  <gazebo reference="left_hand_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+
+  <!-- Active arm — self_collide disabled on every link -->
+  <gazebo reference="right_shoulder_link"><self_collide>false</self_collide><material>Gazebo/Blue</material></gazebo>
+  <gazebo reference="right_upper_arm_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+  <gazebo reference="right_elbow_vis_link"><self_collide>false</self_collide><material>Gazebo/Blue</material></gazebo>
+  <gazebo reference="right_forearm_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+  <gazebo reference="right_wrist_vis_link"><self_collide>false</self_collide><material>Gazebo/Blue</material></gazebo>
+  <gazebo reference="right_gripper_link"><self_collide>false</self_collide><material>Gazebo/Blue</material></gazebo>
+  <gazebo reference="right_finger_l_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+  <gazebo reference="right_finger_r_link"><self_collide>false</self_collide><material>Gazebo/White</material></gazebo>
+
+  <!-- Left shoulder vis — self_collide disabled -->
+  <gazebo reference="left_shoulder_vis_link"><self_collide>false</self_collide><material>Gazebo/Blue</material></gazebo>
+
+  <!-- Wheels — black -->
+  <gazebo reference="left_front_wheel_link"><material>Gazebo/Black</material></gazebo>
+  <gazebo reference="right_front_wheel_link"><material>Gazebo/Black</material></gazebo>
+  <gazebo reference="left_rear_wheel_link"><material>Gazebo/Black</material></gazebo>
+  <gazebo reference="right_rear_wheel_link"><material>Gazebo/Black</material></gazebo>
+
+  <!-- Display — black -->
+  <gazebo reference="head_panel_link"><material>Gazebo/FlatBlack</material></gazebo>
+
+  <!-- Camera — grey -->
+  <gazebo reference="camera_link"><material>Gazebo/Grey</material></gazebo>
+
+  <!-- LiDAR — dark blue (custom ambient/diffuse override) -->
+  <gazebo reference="lidar_link">
+    <visual>
+      <material>
+        <ambient>0.0 0.0 0.35 1.0</ambient>
+        <diffuse>0.0 0.05 0.50 1.0</diffuse>
+        <specular>0.05 0.05 0.20 1.0</specular>
+        <emissive>0.0 0.0 0.0 1.0</emissive>
+      </material>
+    </visual>
+  </gazebo>
+
+</robot>
+

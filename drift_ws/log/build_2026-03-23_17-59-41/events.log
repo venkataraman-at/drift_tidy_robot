@@ -1,0 +1,721 @@
+[0.000000] (-) TimerEvent: {}
+[0.000659] (drift_robot) JobQueued: {'identifier': 'drift_robot', 'dependencies': OrderedDict()}
+[0.000764] (linkattacher_msgs) JobQueued: {'identifier': 'linkattacher_msgs', 'dependencies': OrderedDict()}
+[0.000848] (ros2_linkattacher) JobQueued: {'identifier': 'ros2_linkattacher', 'dependencies': OrderedDict([('linkattacher_msgs', '/home/vidya/drift_ws/install/linkattacher_msgs')])}
+[0.000878] (linkattacher_msgs) JobStarted: {'identifier': 'linkattacher_msgs'}
+[0.004333] (drift_robot) JobStarted: {'identifier': 'drift_robot'}
+[0.006318] (linkattacher_msgs) JobProgress: {'identifier': 'linkattacher_msgs', 'progress': 'cmake'}
+[0.006619] (linkattacher_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/linkattacher_msgs', '-DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/install/linkattacher_msgs'], 'cwd': '/home/vidya/drift_ws/build/linkattacher_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher/lib:/home/vidya/drift_ws/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/linkattacher_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[0.008656] (drift_robot) JobProgress: {'identifier': 'drift_robot', 'progress': 'cmake'}
+[0.008936] (drift_robot) Command: {'cmd': ['/usr/bin/cmake', '/home/vidya/drift_ws/drift_ws/src/drift_robot', '-DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/install/drift_robot'], 'cwd': '/home/vidya/drift_ws/build/drift_robot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher/lib:/home/vidya/drift_ws/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/drift_robot'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[0.048667] (linkattacher_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.061568] (drift_robot) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.100001] (-) TimerEvent: {}
+[0.112993] (linkattacher_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.118540] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.122463] (drift_robot) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.132464] (drift_robot) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200120] (-) TimerEvent: {}
+[0.201041] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.209806] (linkattacher_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.210127] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.210493] (drift_robot) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.210743] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.213457] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.216047] (drift_robot) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.216229] (drift_robot) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.216496] (drift_robot) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.218430] (drift_robot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.285074] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.290299] (drift_robot) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.290935] (linkattacher_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.291107] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.291417] (linkattacher_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.292781] (linkattacher_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.295192] (drift_robot) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.295407] (drift_robot) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.295721] (drift_robot) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.297131] (drift_robot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300186] (-) TimerEvent: {}
+[0.400163] (linkattacher_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.400330] (-) TimerEvent: {}
+[0.410821] (drift_robot) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.456613] (linkattacher_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.469183] (drift_robot) StdoutLine: {'line': b'-- Found rclpy: 3.3.21 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.470013] (drift_robot) StdoutLine: {'line': b'-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[0.499649] (drift_robot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.500442] (-) TimerEvent: {}
+[0.502689] (drift_robot) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.508021] (drift_robot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.509295] (linkattacher_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.511131] (linkattacher_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.515012] (linkattacher_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.515469] (drift_robot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.525576] (drift_robot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.540461] (linkattacher_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.552638] (drift_robot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.554177] (drift_robot) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600577] (-) TimerEvent: {}
+[0.619725] (drift_robot) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.638260] (drift_robot) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.669724] (drift_robot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.674738] (drift_robot) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700683] (-) TimerEvent: {}
+[0.700871] (linkattacher_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.730696] (drift_robot) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.730889] (drift_robot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.784572] (drift_robot) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.785321] (drift_robot) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800861] (-) TimerEvent: {}
+[0.823436] (drift_robot) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[0.824755] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[0.834234] (linkattacher_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.835730] (drift_robot) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[0.900972] (-) TimerEvent: {}
+[0.915784] (drift_robot) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[0.960453] (drift_robot) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[0.972947] (drift_robot) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[0.993166] (drift_robot) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[1.001046] (-) TimerEvent: {}
+[1.003077] (drift_robot) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.006001] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.008144] (linkattacher_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.010044] (drift_robot) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.011072] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[1.011245] (drift_robot) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[1.015977] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[1.023661] (linkattacher_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.024662] (linkattacher_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.028008] (drift_robot) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[1.051441] (linkattacher_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.051551] (linkattacher_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.051598] (linkattacher_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.051642] (linkattacher_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.069177] (drift_robot) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[1.075822] (linkattacher_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.075917] (drift_robot) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[1.084742] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[1.088004] (drift_robot) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[1.088036] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[1.091135] (drift_robot) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[1.091165] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[1.094339] (drift_robot) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[1.094372] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[1.097644] (drift_robot) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[1.097677] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[1.100904] (drift_robot) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[1.100940] (drift_robot) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[1.101097] (-) TimerEvent: {}
+[1.104151] (drift_robot) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[1.141259] (linkattacher_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.142175] (linkattacher_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.142723] (linkattacher_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.144960] (linkattacher_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.161025] (linkattacher_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.167295] (linkattacher_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/vidya/drift_ws/build/linkattacher_msgs\n'}
+[1.171170] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.171881] (linkattacher_msgs) CommandEnded: {'returncode': 0}
+[1.172409] (linkattacher_msgs) JobProgress: {'identifier': 'linkattacher_msgs', 'progress': 'build'}
+[1.172493] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[1.173446] (linkattacher_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vidya/drift_ws/build/linkattacher_msgs', '--', '-j16', '-l16'], 'cwd': '/home/vidya/drift_ws/build/linkattacher_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher/lib:/home/vidya/drift_ws/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/linkattacher_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[1.174073] (drift_robot) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[1.184368] (drift_robot) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[1.191006] (drift_robot) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[1.195641] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[1.201187] (-) TimerEvent: {}
+[1.205930] (drift_robot) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[1.208496] (linkattacher_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.214216] (linkattacher_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.214351] (linkattacher_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[1.221517] (linkattacher_msgs) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_copy_linkattacher_msgs\n'}
+[1.236029] (drift_robot) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[1.241488] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[1.253451] (drift_robot) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[1.282172] (drift_robot) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[1.284703] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.285235] (drift_robot) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[1.301287] (-) TimerEvent: {}
+[1.303513] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.308712] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.320023] (drift_robot) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[1.349092] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.351526] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.351982] (drift_robot) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[1.352239] (drift_robot) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.353171] (drift_robot) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.354777] (drift_robot) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[1.362593] (drift_robot) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[1.362813] (drift_robot) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[1.364016] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[1.364385] (drift_robot) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[1.364579] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.366159] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[1.366456] (drift_robot) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[1.378104] (linkattacher_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.378435] (linkattacher_msgs) StdoutLine: {'line': b'creating linkattacher_msgs.egg-info\n'}
+[1.378546] (linkattacher_msgs) StdoutLine: {'line': b'writing linkattacher_msgs.egg-info/PKG-INFO\n'}
+[1.378649] (linkattacher_msgs) StdoutLine: {'line': b'writing dependency_links to linkattacher_msgs.egg-info/dependency_links.txt\n'}
+[1.378751] (linkattacher_msgs) StdoutLine: {'line': b'writing top-level names to linkattacher_msgs.egg-info/top_level.txt\n'}
+[1.379641] (linkattacher_msgs) StdoutLine: {'line': b"writing manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'\n"}
+[1.380740] (linkattacher_msgs) StdoutLine: {'line': b"reading manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'\n"}
+[1.381023] (linkattacher_msgs) StdoutLine: {'line': b"writing manifest file 'linkattacher_msgs.egg-info/SOURCES.txt'\n"}
+[1.398947] (linkattacher_msgs) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_build_linkattacher_msgs_egg\n'}
+[1.401353] (-) TimerEvent: {}
+[1.429681] (drift_robot) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[1.436169] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[1.443318] (linkattacher_msgs) StdoutLine: {'line': b'[  7%] Built target linkattacher_msgs__rs\n'}
+[1.446321] (drift_robot) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[1.475954] (drift_robot) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[1.481945] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[1.491432] (linkattacher_msgs) StdoutLine: {'line': b'[  7%] Built target linkattacher_msgs__cpp\n'}
+[1.492450] (drift_robot) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.493226] (linkattacher_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_c.dir/rosidl_generator_c/linkattacher_msgs/srv/detail/attach_link__functions.c.o\x1b[0m\n'}
+[1.496589] (linkattacher_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_c.dir/rosidl_generator_c/linkattacher_msgs/srv/detail/detach_link__functions.c.o\x1b[0m\n'}
+[1.498678] (linkattacher_msgs) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.499173] (linkattacher_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.499377] (linkattacher_msgs) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.501453] (-) TimerEvent: {}
+[1.525845] (drift_robot) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[1.526343] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.526777] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.527301] (drift_robot) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.529818] (drift_robot) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[1.530017] (drift_robot) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[1.541297] (linkattacher_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library liblinkattacher_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.542225] (drift_robot) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[1.576475] (linkattacher_msgs) StdoutLine: {'line': b'[ 22%] Built target linkattacher_msgs__rosidl_generator_c\n'}
+[1.583139] (linkattacher_msgs) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.583319] (linkattacher_msgs) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.585588] (linkattacher_msgs) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.601539] (-) TimerEvent: {}
+[1.644022] (drift_robot) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.649502] (drift_robot) StdoutLine: {'line': b'-- Generating done\n'}
+[1.652623] (drift_robot) StdoutLine: {'line': b'-- Build files have been written to: /home/vidya/drift_ws/build/drift_robot\n'}
+[1.663414] (drift_robot) CommandEnded: {'returncode': 0}
+[1.664165] (drift_robot) JobProgress: {'identifier': 'drift_robot', 'progress': 'build'}
+[1.664721] (drift_robot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vidya/drift_ws/build/drift_robot', '--', '-j16', '-l16'], 'cwd': '/home/vidya/drift_ws/build/drift_robot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher/lib:/home/vidya/drift_ws/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/drift_robot'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[1.701679] (-) TimerEvent: {}
+[1.706763] (drift_robot) CommandEnded: {'returncode': 0}
+[1.707426] (drift_robot) JobProgress: {'identifier': 'drift_robot', 'progress': 'install'}
+[1.716066] (drift_robot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vidya/drift_ws/build/drift_robot'], 'cwd': '/home/vidya/drift_ws/build/drift_robot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher/lib:/home/vidya/drift_ws/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/drift_robot'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[1.724435] (drift_robot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.724619] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/urdf\n'}
+[1.724735] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/urdf/drift_robot.urdf.xacro\n'}
+[1.724843] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/worlds\n'}
+[1.724942] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/worlds/home.world\n'}
+[1.725074] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/launch\n'}
+[1.725169] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/launch/simulation.launch.py\n'}
+[1.725255] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/config\n'}
+[1.725355] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/config/waypoint.yaml\n'}
+[1.725453] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/meshes\n'}
+[1.725548] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts\n'}
+[1.725644] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/Copies\n'}
+[1.725754] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/Copies/mar 22\n'}
+[1.725826] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/Copies/mar 22/navigator (copy).py\n'}
+[1.725900] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/Copies/mar 22/pick_place (copy).py\n'}
+[1.725997] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/Copies/navigator.py\n'}
+[1.726080] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/pick_place.py\n'}
+[1.726174] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/navigator.py\n'}
+[1.726266] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/scripts/dummy_camera.py\n'}
+[1.726447] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/lib/drift_robot/navigator.py\n'}
+[1.726576] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/lib/drift_robot/pick_place.py\n'}
+[1.726676] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/lib/drift_robot/dummy_camera.py\n'}
+[1.726805] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/lib/drift_robot/navigator\n'}
+[1.727051] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/ament_index/resource_index/package_run_dependencies/drift_robot\n'}
+[1.727228] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/ament_index/resource_index/parent_prefix_path/drift_robot\n'}
+[1.727423] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/environment/ament_prefix_path.sh\n'}
+[1.727582] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/environment/ament_prefix_path.dsv\n'}
+[1.727706] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/environment/path.sh\n'}
+[1.727871] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/environment/path.dsv\n'}
+[1.728018] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/local_setup.bash\n'}
+[1.728137] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/local_setup.sh\n'}
+[1.728270] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/local_setup.zsh\n'}
+[1.728402] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/local_setup.dsv\n'}
+[1.728532] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/package.dsv\n'}
+[1.728708] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/ament_index/resource_index/packages/drift_robot\n'}
+[1.728854] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/cmake/drift_robotConfig.cmake\n'}
+[1.729115] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/cmake/drift_robotConfig-version.cmake\n'}
+[1.729241] (drift_robot) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/drift_robot/share/drift_robot/package.xml\n'}
+[1.730934] (drift_robot) CommandEnded: {'returncode': 0}
+[1.743221] (drift_robot) JobEnded: {'identifier': 'drift_robot', 'rc': 0}
+[1.753338] (linkattacher_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/linkattacher_msgs/srv/detach_link__type_support.cpp.o\x1b[0m\n'}
+[1.755611] (linkattacher_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/linkattacher_msgs/srv/attach_link__type_support.cpp.o\x1b[0m\n'}
+[1.757156] (linkattacher_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/linkattacher_msgs/srv/detail/detach_link__type_support.cpp.o\x1b[0m\n'}
+[1.760619] (linkattacher_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/linkattacher_msgs/srv/detail/attach_link__type_support.cpp.o\x1b[0m\n'}
+[1.772239] (linkattacher_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/linkattacher_msgs/srv/detail/dds_fastrtps/detach_link__type_support.cpp.o\x1b[0m\n'}
+[1.775044] (linkattacher_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/linkattacher_msgs/srv/detail/dds_fastrtps/attach_link__type_support.cpp.o\x1b[0m\n'}
+[1.801812] (-) TimerEvent: {}
+[1.820283] (linkattacher_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/linkattacher_msgs/srv/attach_link__type_support.cpp.o\x1b[0m\n'}
+[1.821777] (linkattacher_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/linkattacher_msgs/srv/detach_link__type_support.cpp.o\x1b[0m\n'}
+[1.840669] (linkattacher_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.844485] (linkattacher_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/linkattacher_msgs/srv/detail/detach_link__type_support.c.o\x1b[0m\n'}
+[1.844652] (linkattacher_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/linkattacher_msgs/srv/detail/attach_link__type_support.c.o\x1b[0m\n'}
+[1.851579] (linkattacher_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/linkattacher_msgs/srv/detail/attach_link__type_support_c.cpp.o\x1b[0m\n'}
+[1.853559] (linkattacher_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/linkattacher_msgs/srv/detail/detach_link__type_support_c.cpp.o\x1b[0m\n'}
+[1.865785] (linkattacher_msgs) StdoutLine: {'line': b'[ 62%] Built target linkattacher_msgs__rosidl_typesupport_c\n'}
+[1.865997] (linkattacher_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking C shared library liblinkattacher_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.884980] (linkattacher_msgs) StdoutLine: {'line': b'[ 65%] Built target linkattacher_msgs__rosidl_typesupport_introspection_c\n'}
+[1.901925] (-) TimerEvent: {}
+[1.983800] (linkattacher_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.993552] (linkattacher_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.002026] (-) TimerEvent: {}
+[2.016670] (linkattacher_msgs) StdoutLine: {'line': b'[ 70%] Built target linkattacher_msgs__rosidl_typesupport_cpp\n'}
+[2.036866] (linkattacher_msgs) StdoutLine: {'line': b'[ 70%] Built target linkattacher_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.062814] (linkattacher_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.102130] (-) TimerEvent: {}
+[2.112065] (linkattacher_msgs) StdoutLine: {'line': b'[ 72%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.123744] (linkattacher_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.177845] (linkattacher_msgs) StdoutLine: {'line': b'[ 75%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.200128] (linkattacher_msgs) StdoutLine: {'line': b'[ 75%] Built target linkattacher_msgs\n'}
+[2.202195] (-) TimerEvent: {}
+[2.223081] (linkattacher_msgs) StdoutLine: {'line': b'[ 77%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.302314] (-) TimerEvent: {}
+[2.402560] (-) TimerEvent: {}
+[2.502858] (-) TimerEvent: {}
+[2.603144] (-) TimerEvent: {}
+[2.660130] (linkattacher_msgs) StdoutLine: {'line': b'[ 77%] Built target linkattacher_msgs__py\n'}
+[2.679576] (linkattacher_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_py.dir/rosidl_generator_py/linkattacher_msgs/srv/_attach_link_s.c.o\x1b[0m\n'}
+[2.680094] (linkattacher_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_generator_py.dir/rosidl_generator_py/linkattacher_msgs/srv/_detach_link_s.c.o\x1b[0m\n'}
+[2.703229] (-) TimerEvent: {}
+[2.755633] (linkattacher_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/liblinkattacher_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[2.798395] (linkattacher_msgs) StdoutLine: {'line': b'[ 85%] Built target linkattacher_msgs__rosidl_generator_py\n'}
+[2.803328] (-) TimerEvent: {}
+[2.820886] (linkattacher_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.823153] (linkattacher_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.823848] (linkattacher_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/linkattacher_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.886573] (linkattacher_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.887269] (linkattacher_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.894127] (linkattacher_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.903417] (-) TimerEvent: {}
+[2.913665] (linkattacher_msgs) StdoutLine: {'line': b'[100%] Built target linkattacher_msgs__rosidl_typesupport_c__pyext\n'}
+[2.913805] (linkattacher_msgs) StdoutLine: {'line': b'[100%] Built target linkattacher_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[2.917488] (linkattacher_msgs) StdoutLine: {'line': b'[100%] Built target linkattacher_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.925629] (linkattacher_msgs) CommandEnded: {'returncode': 0}
+[2.926100] (linkattacher_msgs) JobProgress: {'identifier': 'linkattacher_msgs', 'progress': 'install'}
+[2.926242] (linkattacher_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vidya/drift_ws/build/linkattacher_msgs'], 'cwd': '/home/vidya/drift_ws/build/linkattacher_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher/lib:/home/vidya/drift_ws/install/linkattacher_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/linkattacher_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[2.932535] (linkattacher_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.932671] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv\n'}
+[2.932762] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.srv\n'}
+[2.932806] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.srv\n'}
+[2.932897] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/rosidl_interfaces/linkattacher_msgs\n'}
+[2.932983] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs\n'}
+[2.933048] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg\n'}
+[2.933116] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.933191] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv\n'}
+[2.933258] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detach_link.h\n'}
+[2.933301] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail\n'}
+[2.933366] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__functions.h\n'}
+[2.933439] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__struct.h\n'}
+[2.933480] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.h\n'}
+[2.933545] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__struct.h\n'}
+[2.933612] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__functions.c\n'}
+[2.933651] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__functions.h\n'}
+[2.933718] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__functions.c\n'}
+[2.933789] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.h\n'}
+[2.933828] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/attach_link.h\n'}
+[2.933883] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/library_path.sh\n'}
+[2.933943] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/library_path.dsv\n'}
+[2.934010] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_c.so\n'}
+[2.934181] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_c.so" to ""\n'}
+[2.934237] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs\n'}
+[2.934293] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg\n'}
+[2.934360] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.934400] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv\n'}
+[2.934459] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail\n'}
+[2.934495] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_fastrtps_c.h\n'}
+[2.934553] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_fastrtps_c.h\n'}
+[2.934586] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[2.934638] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[2.934688] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs\n'}
+[2.934744] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg\n'}
+[2.934806] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.934840] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv\n'}
+[2.934874] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail\n'}
+[2.934931] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.c\n'}
+[2.935001] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_introspection_c.h\n'}
+[2.935035] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.c\n'}
+[2.935068] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_introspection_c.h\n'}
+[2.935124] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_c.so\n'}
+[2.935178] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[2.935224] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_c.so\n'}
+[2.935330] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_c.so" to ""\n'}
+[2.935397] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs\n'}
+[2.935459] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg\n'}
+[2.935510] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.935570] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv\n'}
+[2.935615] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail\n'}
+[2.935646] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__builder.hpp\n'}
+[2.935677] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__traits.hpp\n'}
+[2.935719] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__builder.hpp\n'}
+[2.935773] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__struct.hpp\n'}
+[2.935806] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.hpp\n'}
+[2.935848] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__traits.hpp\n'}
+[2.935906] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.hpp\n'}
+[2.935945] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__struct.hpp\n'}
+[2.935997] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detach_link.hpp\n'}
+[2.936051] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/attach_link.hpp\n'}
+[2.936092] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs\n'}
+[2.936136] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg\n'}
+[2.936178] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.936220] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv\n'}
+[2.936264] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail\n'}
+[2.936294] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.936338] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.936389] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/dds_fastrtps\n'}
+[2.936433] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.936527] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[2.936575] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs\n'}
+[2.936626] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv\n'}
+[2.936672] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail\n'}
+[2.936704] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.936753] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.936798] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/attach_link__type_support.cpp\n'}
+[2.936837] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/include/linkattacher_msgs/linkattacher_msgs/srv/detail/detach_link__type_support.cpp\n'}
+[2.936863] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[2.936970] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[2.937021] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_cpp.so\n'}
+[2.937122] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[2.937162] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/pythonpath.sh\n'}
+[2.937208] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/pythonpath.dsv\n'}
+[2.937247] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info\n'}
+[2.937319] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.937370] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.937420] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.937469] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.937522] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs\n'}
+[2.937549] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.937589] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.937635] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/__init__.py\n'}
+[2.937685] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/liblinkattacher_msgs__rosidl_generator_py.so\n'}
+[2.937727] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.937773] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv\n'}
+[2.937810] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/__init__.py\n'}
+[2.937848] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link_s.c\n'}
+[2.937887] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link.py\n'}
+[2.937930] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link_s.c\n'}
+[2.937970] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link.py\n'}
+[2.938016] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[2.938064] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.938115] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/_linkattacher_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.962042] (linkattacher_msgs) StdoutLine: {'line': b"Listing '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs'...\n"}
+[2.962160] (linkattacher_msgs) StdoutLine: {'line': b"Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/__init__.py'...\n"}
+[2.962225] (linkattacher_msgs) StdoutLine: {'line': b"Listing '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv'...\n"}
+[2.962281] (linkattacher_msgs) StdoutLine: {'line': b"Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/__init__.py'...\n"}
+[2.962334] (linkattacher_msgs) StdoutLine: {'line': b"Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_attach_link.py'...\n"}
+[2.962384] (linkattacher_msgs) StdoutLine: {'line': b"Compiling '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/srv/_detach_link.py'...\n"}
+[2.965136] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.965312] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.965381] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.965452] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.965510] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.965618] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages/linkattacher_msgs/linkattacher_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.965668] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_py.so\n'}
+[2.965784] (linkattacher_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/linkattacher_msgs/lib/liblinkattacher_msgs__rosidl_generator_py.so" to ""\n'}
+[2.965830] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/rust_packages/linkattacher_msgs\n'}
+[2.965878] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust\n'}
+[2.965929] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/Cargo.toml\n'}
+[2.965991] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src\n'}
+[2.966021] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv\n'}
+[2.966068] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv/rmw.rs\n'}
+[2.966125] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/lib.rs\n'}
+[2.966154] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/src/srv.rs\n'}
+[2.966200] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/rust/build.rs\n'}
+[2.966247] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.idl\n'}
+[2.966294] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.idl\n'}
+[2.966340] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink.srv\n'}
+[2.966382] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink_Request.msg\n'}
+[2.966430] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/AttachLink_Response.msg\n'}
+[2.966481] (linkattacher_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink.srv\n'}
+[2.966511] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink_Request.msg\n'}
+[2.966567] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/srv/DetachLink_Response.msg\n'}
+[2.966605] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/package_run_dependencies/linkattacher_msgs\n'}
+[2.966653] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/parent_prefix_path/linkattacher_msgs\n'}
+[2.966700] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/ament_prefix_path.sh\n'}
+[2.966756] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/ament_prefix_path.dsv\n'}
+[2.966784] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/path.sh\n'}
+[2.966831] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/environment/path.dsv\n'}
+[2.966871] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.bash\n'}
+[2.966922] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.sh\n'}
+[2.966972] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.zsh\n'}
+[2.967019] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/local_setup.dsv\n'}
+[2.967057] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/package.dsv\n'}
+[2.967099] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/ament_index/resource_index/packages/linkattacher_msgs\n'}
+[2.967170] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cExport.cmake\n'}
+[2.967223] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.967282] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.967335] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.967391] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.967442] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.967499] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cExport.cmake\n'}
+[2.967551] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.967605] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_cppExport.cmake\n'}
+[2.967661] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.967714] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.967770] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.967831] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.967879] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[2.967933] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.968002] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_pyExport.cmake\n'}
+[2.968052] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/export_linkattacher_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.968101] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[2.968150] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.968199] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.968247] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.968295] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.968344] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.968393] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.968444] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgsConfig.cmake\n'}
+[2.968488] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake/linkattacher_msgsConfig-version.cmake\n'}
+[2.968531] (linkattacher_msgs) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/package.xml\n'}
+[2.970478] (linkattacher_msgs) CommandEnded: {'returncode': 0}
+[2.982929] (linkattacher_msgs) JobEnded: {'identifier': 'linkattacher_msgs', 'rc': 0}
+[2.983389] (ros2_linkattacher) JobStarted: {'identifier': 'ros2_linkattacher'}
+[2.990926] (ros2_linkattacher) JobProgress: {'identifier': 'ros2_linkattacher', 'progress': 'cmake'}
+[2.991687] (ros2_linkattacher) Command: {'cmd': ['/usr/bin/cmake', '/home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher', '-DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/install/ros2_linkattacher'], 'cwd': '/home/vidya/drift_ws/build/ros2_linkattacher', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/ros2_linkattacher'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[3.003550] (-) TimerEvent: {}
+[3.060327] (ros2_linkattacher) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[3.103664] (-) TimerEvent: {}
+[3.113535] (ros2_linkattacher) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[3.118621] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.194626] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.202520] (ros2_linkattacher) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.202661] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.202972] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.203743] (-) TimerEvent: {}
+[3.205130] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.282661] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.288389] (ros2_linkattacher) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.288730] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.289108] (ros2_linkattacher) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.290628] (ros2_linkattacher) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[3.303824] (-) TimerEvent: {}
+[3.404019] (-) TimerEvent: {}
+[3.439661] (ros2_linkattacher) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[3.504226] (ros2_linkattacher) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.504331] (-) TimerEvent: {}
+[3.555319] (ros2_linkattacher) StdoutLine: {'line': b'-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[3.585093] (ros2_linkattacher) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.588305] (ros2_linkattacher) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.593871] (ros2_linkattacher) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.601679] (ros2_linkattacher) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.604407] (-) TimerEvent: {}
+[3.612189] (ros2_linkattacher) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.641924] (ros2_linkattacher) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.643948] (ros2_linkattacher) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.704516] (-) TimerEvent: {}
+[3.720340] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[3.747464] (ros2_linkattacher) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.790249] (ros2_linkattacher) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.797539] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.804691] (-) TimerEvent: {}
+[3.872463] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.872640] (ros2_linkattacher) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.904839] (-) TimerEvent: {}
+[3.959821] (ros2_linkattacher) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.961436] (ros2_linkattacher) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.004917] (-) TimerEvent: {}
+[4.010958] (ros2_linkattacher) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[4.011680] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[4.024217] (ros2_linkattacher) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[4.105087] (-) TimerEvent: {}
+[4.157976] (ros2_linkattacher) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[4.205236] (-) TimerEvent: {}
+[4.226797] (ros2_linkattacher) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[4.246799] (ros2_linkattacher) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[4.267035] (ros2_linkattacher) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[4.276783] (ros2_linkattacher) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[4.279649] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.283757] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[4.284731] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[4.284847] (ros2_linkattacher) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[4.290228] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[4.305321] (-) TimerEvent: {}
+[4.305758] (ros2_linkattacher) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[4.351780] (ros2_linkattacher) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[4.360981] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[4.372193] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[4.375836] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[4.376026] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[4.379207] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[4.379367] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[4.382432] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[4.382596] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[4.385795] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[4.385959] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[4.389230] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[4.389413] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[4.392418] (ros2_linkattacher) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[4.405524] (-) TimerEvent: {}
+[4.459446] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.460881] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[4.461106] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[4.472890] (ros2_linkattacher) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[4.479686] (ros2_linkattacher) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[4.484355] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[4.497125] (ros2_linkattacher) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[4.505766] (-) TimerEvent: {}
+[4.545568] (ros2_linkattacher) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[4.554308] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[4.572031] (ros2_linkattacher) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[4.606005] (-) TimerEvent: {}
+[4.615729] (ros2_linkattacher) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[4.618808] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[4.619443] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[4.640926] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.647262] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[4.664968] (ros2_linkattacher) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[4.706235] (-) TimerEvent: {}
+[4.709646] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[4.713233] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[4.713993] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[4.714307] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[4.715631] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[4.717199] (ros2_linkattacher) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[4.732102] (ros2_linkattacher) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[4.732958] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[4.735473] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[4.736209] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[4.736611] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.740001] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[4.740513] (ros2_linkattacher) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[4.806360] (-) TimerEvent: {}
+[4.832212] (ros2_linkattacher) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[4.844677] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[4.863568] (ros2_linkattacher) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[4.906563] (-) TimerEvent: {}
+[4.911881] (ros2_linkattacher) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[4.919732] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[4.937895] (ros2_linkattacher) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[4.985802] (ros2_linkattacher) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[4.986281] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[4.986991] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[4.987329] (ros2_linkattacher) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[4.991501] (ros2_linkattacher) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[4.991806] (ros2_linkattacher) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[5.006713] (-) TimerEvent: {}
+[5.009195] (ros2_linkattacher) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[5.056149] (ros2_linkattacher) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)\n'}
+[5.095951] (ros2_linkattacher) StdoutLine: {'line': b'-- Found linkattacher_msgs: 0.0.0 (/home/vidya/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake)\n'}
+[5.106778] (-) TimerEvent: {}
+[5.106983] (ros2_linkattacher) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.107557] (ros2_linkattacher) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.107885] (ros2_linkattacher) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher/include\n'}
+[5.107966] (ros2_linkattacher) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.108446] (ros2_linkattacher) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.108517] (ros2_linkattacher) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[5.108710] (ros2_linkattacher) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.109349] (ros2_linkattacher) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.109552] (ros2_linkattacher) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[5.109606] (ros2_linkattacher) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.110497] (ros2_linkattacher) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.126646] (ros2_linkattacher) StdoutLine: {'line': b'-- Generating done\n'}
+[5.130097] (ros2_linkattacher) StdoutLine: {'line': b'-- Build files have been written to: /home/vidya/drift_ws/build/ros2_linkattacher\n'}
+[5.137239] (ros2_linkattacher) CommandEnded: {'returncode': 0}
+[5.138887] (ros2_linkattacher) JobProgress: {'identifier': 'ros2_linkattacher', 'progress': 'build'}
+[5.138931] (ros2_linkattacher) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vidya/drift_ws/build/ros2_linkattacher', '--', '-j16', '-l16'], 'cwd': '/home/vidya/drift_ws/build/ros2_linkattacher', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/ros2_linkattacher'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[5.190872] (ros2_linkattacher) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/gazebo_link_attacher.dir/src/gazebo_link_attacher.cpp.o\x1b[0m\n'}
+[5.207018] (-) TimerEvent: {}
+[5.307379] (-) TimerEvent: {}
+[5.407693] (-) TimerEvent: {}
+[5.508004] (-) TimerEvent: {}
+[5.608322] (-) TimerEvent: {}
+[5.708650] (-) TimerEvent: {}
+[5.808976] (-) TimerEvent: {}
+[5.909305] (-) TimerEvent: {}
+[6.009637] (-) TimerEvent: {}
+[6.109960] (-) TimerEvent: {}
+[6.210279] (-) TimerEvent: {}
+[6.310597] (-) TimerEvent: {}
+[6.410934] (-) TimerEvent: {}
+[6.511386] (-) TimerEvent: {}
+[6.611698] (-) TimerEvent: {}
+[6.712019] (-) TimerEvent: {}
+[6.812254] (-) TimerEvent: {}
+[6.912579] (-) TimerEvent: {}
+[7.012900] (-) TimerEvent: {}
+[7.113242] (-) TimerEvent: {}
+[7.213569] (-) TimerEvent: {}
+[7.313889] (-) TimerEvent: {}
+[7.414215] (-) TimerEvent: {}
+[7.514473] (-) TimerEvent: {}
+[7.614788] (-) TimerEvent: {}
+[7.715103] (-) TimerEvent: {}
+[7.815429] (-) TimerEvent: {}
+[7.915743] (-) TimerEvent: {}
+[8.016067] (-) TimerEvent: {}
+[8.116386] (-) TimerEvent: {}
+[8.216717] (-) TimerEvent: {}
+[8.317037] (-) TimerEvent: {}
+[8.417348] (-) TimerEvent: {}
+[8.517676] (-) TimerEvent: {}
+[8.617987] (-) TimerEvent: {}
+[8.718313] (-) TimerEvent: {}
+[8.818639] (-) TimerEvent: {}
+[8.918958] (-) TimerEvent: {}
+[9.019288] (-) TimerEvent: {}
+[9.119608] (-) TimerEvent: {}
+[9.219934] (-) TimerEvent: {}
+[9.320256] (-) TimerEvent: {}
+[9.420519] (-) TimerEvent: {}
+[9.520833] (-) TimerEvent: {}
+[9.621160] (-) TimerEvent: {}
+[9.721489] (-) TimerEvent: {}
+[9.821823] (-) TimerEvent: {}
+[9.922145] (-) TimerEvent: {}
+[10.022490] (-) TimerEvent: {}
+[10.122814] (-) TimerEvent: {}
+[10.223144] (-) TimerEvent: {}
+[10.323473] (-) TimerEvent: {}
+[10.423798] (-) TimerEvent: {}
+[10.524144] (-) TimerEvent: {}
+[10.624372] (-) TimerEvent: {}
+[10.724692] (-) TimerEvent: {}
+[10.825013] (-) TimerEvent: {}
+[10.925342] (-) TimerEvent: {}
+[11.025675] (-) TimerEvent: {}
+[11.125993] (-) TimerEvent: {}
+[11.226315] (-) TimerEvent: {}
+[11.326638] (-) TimerEvent: {}
+[11.426968] (-) TimerEvent: {}
+[11.527188] (-) TimerEvent: {}
+[11.627442] (-) TimerEvent: {}
+[11.727754] (-) TimerEvent: {}
+[11.828074] (-) TimerEvent: {}
+[11.928382] (-) TimerEvent: {}
+[12.028694] (-) TimerEvent: {}
+[12.129001] (-) TimerEvent: {}
+[12.229317] (-) TimerEvent: {}
+[12.329626] (-) TimerEvent: {}
+[12.412712] (ros2_linkattacher) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libgazebo_link_attacher.so\x1b[0m\n'}
+[12.429823] (-) TimerEvent: {}
+[12.530242] (-) TimerEvent: {}
+[12.630579] (-) TimerEvent: {}
+[12.730938] (-) TimerEvent: {}
+[12.780772] (ros2_linkattacher) StdoutLine: {'line': b'[100%] Built target gazebo_link_attacher\n'}
+[12.792363] (ros2_linkattacher) CommandEnded: {'returncode': 0}
+[12.792831] (ros2_linkattacher) JobProgress: {'identifier': 'ros2_linkattacher', 'progress': 'install'}
+[12.793395] (ros2_linkattacher) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vidya/drift_ws/build/ros2_linkattacher'], 'cwd': '/home/vidya/drift_ws/build/ros2_linkattacher', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vidya'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vidya/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vidya'), ('OLDPWD', '/home/vidya'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3836'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/vidya/drift_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'vidya'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'vidya'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('GeographicLib_DIR', '/usr/local/lib/cmake/GeographicLib'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/vidya/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hsrb:@/tmp/.ICE-unix/3808,unix/hsrb:/tmp/.ICE-unix/3808'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/30e34b31_12bf_4a04_9c3f_bbc3e97a9694'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/vidya/drift_ws/build/ros2_linkattacher'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', ':/opt/ros/humble/lib'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vidya/drift_ws/install/linkattacher_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/vidya/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble')]), 'shell': False}
+[12.804611] (ros2_linkattacher) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.804792] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/library_path.sh\n'}
+[12.804959] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/library_path.dsv\n'}
+[12.805053] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/lib/libgazebo_link_attacher.so\n'}
+[12.807576] (ros2_linkattacher) StdoutLine: {'line': b'-- Set runtime path of "/home/vidya/drift_ws/install/ros2_linkattacher/lib/libgazebo_link_attacher.so" to ""\n'}
+[12.807745] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ament_index/resource_index/package_run_dependencies/ros2_linkattacher\n'}
+[12.807857] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ament_index/resource_index/parent_prefix_path/ros2_linkattacher\n'}
+[12.808069] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/ament_prefix_path.sh\n'}
+[12.808277] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/ament_prefix_path.dsv\n'}
+[12.808353] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/path.sh\n'}
+[12.808462] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/path.dsv\n'}
+[12.808534] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.bash\n'}
+[12.808595] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.sh\n'}
+[12.808652] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.zsh\n'}
+[12.808709] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.dsv\n'}
+[12.808804] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/package.dsv\n'}
+[12.808933] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ament_index/resource_index/packages/ros2_linkattacher\n'}
+[12.808998] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[12.809060] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/cmake/ros2_linkattacherConfig.cmake\n'}
+[12.809117] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/cmake/ros2_linkattacherConfig-version.cmake\n'}
+[12.809209] (ros2_linkattacher) StdoutLine: {'line': b'-- Installing: /home/vidya/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/package.xml\n'}
+[12.811721] (ros2_linkattacher) CommandEnded: {'returncode': 0}
+[12.823443] (ros2_linkattacher) JobEnded: {'identifier': 'ros2_linkattacher', 'rc': 0}
+[12.823810] (-) EventReactorShutdown: {}

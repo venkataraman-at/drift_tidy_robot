@@ -1,0 +1,146 @@
+[0.011s] Invoking command in '/home/vidya/drift_ws/drift_ws/build/ros2_linkattacher': CMAKE_PREFIX_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/drift_ws/install/drift_robot:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble LD_LIBRARY_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher -DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher
+[0.104s] -- The C compiler identification is GNU 11.4.0
+[0.162s] -- The CXX compiler identification is GNU 11.4.0
+[0.169s] -- Detecting C compiler ABI info
+[0.234s] -- Detecting C compiler ABI info - done
+[0.239s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.240s] -- Detecting C compile features
+[0.240s] -- Detecting C compile features - done
+[0.243s] -- Detecting CXX compiler ABI info
+[0.312s] -- Detecting CXX compiler ABI info - done
+[0.318s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.318s] -- Detecting CXX compile features
+[0.318s] -- Detecting CXX compile features - done
+[0.320s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.452s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.531s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.595s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[0.627s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.631s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.636s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.645s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.656s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.686s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.688s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.782s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.810s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.850s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.859s] -- Looking for pthread.h
+[0.966s] -- Looking for pthread.h - found
+[0.966s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.049s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.050s] -- Found Threads: TRUE  
+[1.094s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[1.095s] -- Checking for module 'bullet>=2.82'
+[1.106s] --   Found bullet, version 3.05
+[1.262s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[1.337s] -- Found assimp: /usr/include (found version "5.2.0") 
+[1.358s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.383s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.396s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.404s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.412s] -- Searching for dependencies of ignition-math6
+[1.414s] -- Looking for OGRE...
+[1.414s] -- OGRE_PREFIX_WATCH changed.
+[1.423s] -- Checking for module 'OGRE'
+[1.444s] --   Found OGRE, version 1.9.0
+[1.498s] -- Found Ogre Ghadamon (1.9.0)
+[1.509s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.519s] -- Looking for OGRE_Paging...
+[1.523s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.524s] -- Looking for OGRE_Terrain...
+[1.527s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.527s] -- Looking for OGRE_Property...
+[1.530s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.530s] -- Looking for OGRE_RTShaderSystem...
+[1.534s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.534s] -- Looking for OGRE_Volume...
+[1.537s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.537s] -- Looking for OGRE_Overlay...
+[1.541s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[1.613s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.615s] -- Looking for ignition-transport8 -- found version 8.2.1
+[1.615s] -- Searching for dependencies of ignition-transport8
+[1.629s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[1.639s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.643s] -- Checking for module 'libzmq >= 4'
+[1.658s] --   Found libzmq , version 4.3.4
+[1.716s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.726s] -- Checking for module 'uuid'
+[1.748s] --   Found uuid, version 2.37.2
+[1.803s] -- Found UUID: TRUE  
+[1.807s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.808s] -- Searching for dependencies of ignition-msgs5
+[1.824s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.828s] -- Checking for module 'tinyxml2'
+[1.842s] --   Found tinyxml2, version 9.0.0
+[1.896s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.899s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.900s] -- Searching for dependencies of ignition-common3
+[1.901s] -- Looking for dlfcn.h - found
+[1.902s] -- Looking for libdl - found
+[1.904s] -- Found DL: TRUE  
+[1.918s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[1.918s] -- Searching for <ignition-common3> component [graphics]
+[1.921s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[1.921s] -- Searching for dependencies of ignition-common3-graphics
+[1.922s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.924s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[1.925s] -- Searching for dependencies of ignition-fuel_tools4
+[2.032s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[2.046s] -- Checking for module 'jsoncpp'
+[2.067s] --   Found jsoncpp, version 1.9.5
+[2.124s] -- Found JSONCPP: TRUE  
+[2.133s] -- Checking for module 'libzip'
+[2.155s] --   Found libzip, version 1.7.3
+[2.210s] -- Found ZIP: TRUE  
+[2.211s] -- Looking for ignition-common3 -- found version 3.14.0
+[2.212s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.213s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.218s] -- Gazebo version: 11.10
+[2.218s] -- Checking for module 'tbb'
+[2.238s] --   Found tbb, version 2021.5.0
+[2.298s] -- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[2.354s] -- Found linkattacher_msgs: 0.0.0 (/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/share/linkattacher_msgs/cmake)
+[2.365s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.366s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.366s] -- Configured cppcheck include dirs: /home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher/include
+[2.366s] -- Configured cppcheck exclude dirs and/or files: 
+[2.367s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.367s] -- Configured cpplint exclude dirs and/or files: 
+[2.367s] -- Added test 'lint_cmake' to check CMake code style
+[2.368s] -- Added test 'uncrustify' to check C / C++ code style
+[2.368s] -- Configured uncrustify additional arguments: 
+[2.368s] -- Added test 'xmllint' to check XML markup files
+[2.369s] -- Configuring done
+[2.388s] -- Generating done
+[2.392s] -- Build files have been written to: /home/vidya/drift_ws/drift_ws/build/ros2_linkattacher
+[2.403s] Invoked command in '/home/vidya/drift_ws/drift_ws/build/ros2_linkattacher' returned '0': CMAKE_PREFIX_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/drift_ws/install/drift_robot:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble LD_LIBRARY_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher -DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher
+[2.403s] Invoking command in '/home/vidya/drift_ws/drift_ws/build/ros2_linkattacher': CMAKE_PREFIX_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/drift_ws/install/drift_robot:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble LD_LIBRARY_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/vidya/drift_ws/drift_ws/build/ros2_linkattacher -- -j16 -l16
+[2.465s] [ 50%] [32mBuilding CXX object CMakeFiles/gazebo_link_attacher.dir/src/gazebo_link_attacher.cpp.o[0m
+[11.013s] [100%] [32m[1mLinking CXX shared library libgazebo_link_attacher.so[0m
+[11.434s] [100%] Built target gazebo_link_attacher
+[11.446s] Invoked command in '/home/vidya/drift_ws/drift_ws/build/ros2_linkattacher' returned '0': CMAKE_PREFIX_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/drift_ws/install/drift_robot:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble LD_LIBRARY_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/vidya/drift_ws/drift_ws/build/ros2_linkattacher -- -j16 -l16
+[11.448s] Invoking command in '/home/vidya/drift_ws/drift_ws/build/ros2_linkattacher': CMAKE_PREFIX_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/drift_ws/install/drift_robot:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble LD_LIBRARY_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/vidya/drift_ws/drift_ws/build/ros2_linkattacher
+[11.456s] -- Install configuration: ""
+[11.456s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/library_path.sh
+[11.457s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/library_path.dsv
+[11.457s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib/libgazebo_link_attacher.so
+[11.459s] -- Set runtime path of "/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib/libgazebo_link_attacher.so" to ""
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ament_index/resource_index/package_run_dependencies/ros2_linkattacher
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ament_index/resource_index/parent_prefix_path/ros2_linkattacher
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/ament_prefix_path.sh
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/ament_prefix_path.dsv
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/path.sh
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/environment/path.dsv
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.bash
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.sh
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.zsh
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/local_setup.dsv
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/package.dsv
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ament_index/resource_index/packages/ros2_linkattacher
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/cmake/ament_cmake_export_libraries-extras.cmake
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/cmake/ros2_linkattacherConfig.cmake
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/cmake/ros2_linkattacherConfig-version.cmake
+[11.459s] -- Installing: /home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/share/ros2_linkattacher/package.xml
+[11.461s] Invoked command in '/home/vidya/drift_ws/drift_ws/build/ros2_linkattacher' returned '0': CMAKE_PREFIX_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher:/home/vidya/drift_ws/drift_ws/install/drift_robot:/home/vidya/drift_ws/install/drift_robot:/opt/ros/humble LD_LIBRARY_PATH=/home/vidya/drift_ws/drift_ws/install/linkattacher_msgs/lib:/home/vidya/drift_ws/drift_ws/install/ros2_linkattacher/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/vidya/drift_ws/drift_ws/build/ros2_linkattacher
