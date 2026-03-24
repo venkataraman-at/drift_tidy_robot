@@ -605,33 +605,7 @@
     </model>
 
     <!-- ==================== PICKUP OBJECTS ==================== -->
-    <!--
-      12 objects placed strategically to constrain the robot's navigation path.
-      Furniture footprints create corridors; objects are placed at the ends of those
-      corridors, in corners, and in zones the robot must specifically detour into.
-
-      ROOM 1 objects (6) — x=[-6,2], y=[-3.5,3.5]:
-        1.  Red ball       (−4.5,  2.8)  NW corner, past west wall — behind chair2 line
-        2.  Blue cube      ( 0.8,  2.5)  NE zone near shared wall, north side
-        3.  Green cylinder (−5.2, −2.2)  Deep SW, tight corridor between west wall & sofa
-        4.  White ball     (−0.5,  0.5)  Mid-east open corridor between table & doorway
-        5.  Teal block     (−4.0, −1.0)  Mid-west, forces route around sofa left arm
-        6.  Metal sphere   (−1.5,  3.1)  Near north wall, behind TV cabinet right side
-
-      ROOM 2 objects (6) — x=[2,10], y=[-3.5,3.5]:
-        7.  Yellow sphere  ( 3.5,  2.8)  NW of Room 2, near north wall
-        8.  Orange cube    ( 5.5, −3.0)  Deep south, near south wall
-        9.  Purple cyl     ( 6.8,  0.8)  Centre-west, between open floor & bed footboard
-       10.  Magenta disc   ( 7.8, −2.5)  South zone, between bed footboard and south wall
-       11.  Cyan tall cyl  ( 3.2, −1.5)  West side R2, narrow strip near doorway side
-       12.  Pink book box  ( 5.0,  2.8)  North zone near north wall, under desk area
-
-      Inertia tensors:
-        Sphere  (r, m):      Ixx=Iyy=Izz = 2/5*m*r²
-        Cylinder (r,l, m):  Ixx=Iyy = m*(3r²+l²)/12   Izz = m*r²/2
-        Box (a,b,c, m):     Ixx = m*(b²+c²)/12   Iyy = m*(a²+c²)/12   Izz = m*(a²+b²)/12
-    -->
-
+   
     <!-- 1. Red ball — NW corner Room 1, behind chair2 line (−4.5, 2.8)
          Represents: bouncy toy ball.  r=0.05 m=0.10  I=2/5*0.10*0.0025=0.0001 -->
     <model name="pickup_ball_red"><static>false</static>
