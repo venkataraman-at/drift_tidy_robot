@@ -1,73 +1,4 @@
 #!/usr/bin/env python3
-"""
-mission_node.py — Single-object mission: pick up cyan cylinder and drop in collection box
-==========================================================================================
-Task  : Enter Room 2, collect pickup_cylinder_cyan_tall, return to collection box in Room 1.
-
-World layout  (home.world)
----------------------------------------
-  Room 1 : x=[-6,  2], y=[-3.5, 3.5]   warm oak floor
-  Room 2 : x=[ 2, 10], y=[-3.5, 3.5]   cool concrete floor
-  Doorway: x=2,  y=[-0.70, +0.70]  (1.4 m wide collision gap, centred y=0)
-  Robot spawn : ~(0, 0)
-
-Obstacle edges (exact from SDF, with robot radius 0.25 m noted):
-  shared_wall_south : x=2.0, spans y=[-3.5,-0.70]  ← wall inner face x=1.9
-  shared_wall_north : x=2.0, spans y=[+0.70,+3.5]  ← wall inner face x=1.9
-  room1_south wall  : inner face y=-3.4
-  room1_north wall  : inner face y=+3.4
-  room1_west wall   : inner face x=-5.9
-  room2_east wall   : inner face x=+9.9
-  room1_chair1      : x=[-2.22,-1.78]  y=[0.33,0.77]
-  room1_table       : x=[-2.70,-1.30]  y=[0.825,1.575]
-  room1_chair2      : x=[-3.72,-3.28]  y=[0.98,1.42]   (rotated 90°)
-  room1_sofa        : x=[-2.90,-1.10]  y=[-3.20,-2.48]
-  room1_coffee_table: x=[-2.45,-1.55]  y=[-1.80,-1.30]
-  room1_side_table  : x=[-1.10,-0.70]  y=[-3.04,-2.64]
-  room1_tv_cabinet  : x=[-2.60,-1.40]  y=[3.12,3.50]
-  room2_bed         : x=[7.80, 9.80]   y=[-0.80,+0.80]
-  room2_desk (main) : x=[7.80, 9.20]   y=[2.50, 3.10]
-  room2_rolling_chair: x=[8.26,8.74]   y=[1.61, 2.09]
-  collection_box    : outer x=[-5.58,-4.42]  outer y=[-3.00,-2.02]
-
-Cyan object pose: (3.2, -1.5)
-Collection box centre: (-5.0, -2.5)
-
-=== NAVIGATION PATH (hardcoded, obstacle-free) ===
-
-OUTBOUND  spawn(0,0) → cyan(3.2,-1.5)
-──────────────────────────────────────────────────
-WP1  ( 1.4,  0.0)   Approach doorway dead-centre.  0.5 m west of shared-wall inner face.
-                    y=0.0 is geometric centre of doorway gap [-0.70,+0.70]: ±0.45 m clearance.
-WP2  ( 2.6,  0.0)   0.5 m east of shared-wall inner face — safely inside Room 2.
-WP3  ( 3.2, -1.5)   Object location — open floor, no furniture within 1 m.
-
-RETURN  cyan(3.2,-1.5) → collection_box(-5.0,-2.5)
-──────────────────────────────────────────────────
-WP1  ( 2.6,  0.0)   Mirror of outbound WP2 — start return through doorway.
-WP2  ( 1.4,  0.0)   Back in Room 1, clear of shared wall.
-WP3  ( 0.0,  2.2)   North corridor.  Clears:
-                      dining table north face (y=1.575): +0.38 m gap ✓
-                      chair2 north face       (y=1.42):  +0.53 m gap ✓
-                      chair1 (east face x=-1.78): +1.53 m to east ✓
-WP4  (-3.5,  2.2)   West along north corridor.  Clears:
-                      TV cabinet south face (y=3.12): +0.67 m gap ✓
-                      chair2 fully cleared to the south ✓
-WP5  (-5.0,  2.2)   Far west at x=-5.0.
-                      West wall inner face (x=-5.9): +0.65 m gap ✓
-WP6  (-5.0, -2.0)   Descend south at x=-5.0 — entirely west of ALL Room 1 furniture.
-                      Sofa west face (x=-2.90): +1.85 m clearance ✓
-                      Coffee table west face (x=-2.45): +2.30 m clearance ✓
-WP7  (-4.5, -2.3)   Drop position — inside collection box footprint.
-                      Box east outer wall (x=-4.42): robot centre at -4.5 → east face -4.25 (inside) ✓
-                      Box north outer wall (y=-2.02): robot centre at -2.3 → north face -2.05 (inside) ✓
-                      West wall inner (x=-5.9): +1.15 m clearance ✓
-                      South wall inner (y=-3.4): +0.85 m clearance ✓
-
-ROS 2 : Humble
-Gazebo: Ignition/Fortress — SetEntityState  (falls back to Classic SetModelState)
-"""
-
 import math
 import time
 import rclpy
@@ -119,10 +50,6 @@ _OUTBOUND_PATH = [
 ]
 
 # ── RETURN: cyan(3.2,-1.5) → collection_box(-5.0,-2.5) ───────────────────
-#
-# Strategy: reverse through doorway → arc to north corridor above ALL R1 furniture →
-#           descend along the west wall (x=-5.0) → approach box from north/east
-#
 # y=2.2 north corridor clearances:
 #   dining table north face y=1.575 → gap = 2.2−1.575−0.25 = +0.375 m ✓
 #   chair2 north face       y=1.42  → gap = 2.2−1.42 −0.25 = +0.530 m ✓
