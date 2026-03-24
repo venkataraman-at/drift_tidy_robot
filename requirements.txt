@@ -1,0 +1,8 @@
+# Python dependencies beyond the ROS 2 base install (rclpy, message packages, etc.)
+#
+# This project’s nodes use only the Python standard library plus packages supplied
+# by ROS 2 (Humble/Jazzy). No extra pip packages are required to build or run the
+# simulation and mission node.
+#
+# If you add tooling (e.g. linters) locally, list them here, for example:
+#   pytest>=7.0

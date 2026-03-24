@@ -1,0 +1,21 @@
+# ROS 2 / colcon
+**/build/
+**/install/
+**/log/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+.eggs/
+
+# Runtime / bags (simulation.launch.py default)
+logs/
+*.db3
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

@@ -1,7 +1,0 @@
-{
-  "package_name": "linkattacher_msgs",
-  "non_idl_tuples": [
-    "/home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/linkattacher_msgs:srv/AttachLink.srv",
-    "/home/vidya/drift_ws/drift_ws/src/IFRA_LinkAttacher/linkattacher_msgs:srv/DetachLink.srv"
-  ]
-}

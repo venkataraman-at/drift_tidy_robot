@@ -1,6 +1,0 @@
-Invoking command in '/home/vidya/drift_ws/src/build/drift_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vidya/drift_ws/src/drift_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/src/install/drift_robot
-Invoked command in '/home/vidya/drift_ws/src/build/drift_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/vidya/drift_ws/src/drift_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vidya/drift_ws/src/install/drift_robot
-Invoking command in '/home/vidya/drift_ws/src/build/drift_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vidya/drift_ws/src/build/drift_robot -- -j16 -l16
-Invoked command in '/home/vidya/drift_ws/src/build/drift_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/vidya/drift_ws/src/build/drift_robot -- -j16 -l16
-Invoking command in '/home/vidya/drift_ws/src/build/drift_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vidya/drift_ws/src/build/drift_robot
-Invoked command in '/home/vidya/drift_ws/src/build/drift_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/vidya/drift_ws/src/build/drift_robot
