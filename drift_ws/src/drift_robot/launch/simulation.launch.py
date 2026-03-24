@@ -31,7 +31,7 @@ def generate_launch_description() -> LaunchDescription:
     robot_xacro = PathJoinSubstitution([package_share, "urdf", "drift_robot.urdf.xacro"])
     waypoint_file = PathJoinSubstitution([package_share, "config", "waypoints.yaml"])
 
-    # 1. Gazebo ----------------------------------------------------------------
+    # 1. Gazebo
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             PathJoinSubstitution(
@@ -41,7 +41,7 @@ def generate_launch_description() -> LaunchDescription:
         launch_arguments={"world": world, "gui": gui}.items(),
     )
 
-    # 2. Robot state publisher -------------------------------------------------
+    # 2. Robot state publisher
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -56,7 +56,7 @@ def generate_launch_description() -> LaunchDescription:
         output="screen",
     )
 
-    # 3. Spawn robot -----------------------------------------------------------
+    # 3. Spawn robot 
     spawn_robot = Node(
         package="gazebo_ros",
         executable="spawn_entity.py",
@@ -70,7 +70,7 @@ def generate_launch_description() -> LaunchDescription:
         output="screen",
     )
 
-    # 4. Bag recorder — logs /odom and /scan for measurable output -------------
+    # 4. Bag recorder — logs /odom and /scan for measurable output
     bag_recorder = ExecuteProcess(
         cmd=[
             "ros2", "bag", "record",
@@ -82,7 +82,7 @@ def generate_launch_description() -> LaunchDescription:
         output="screen",
     )
 
-    # 5. Mission node — full pick-and-place mission, delayed until spawn done --
+    
     mission = Node(
         package="drift_robot",
         executable="navigator",
