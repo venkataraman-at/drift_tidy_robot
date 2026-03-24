@@ -3,12 +3,6 @@
 
   <!-- ============================================================
        MATERIAL DEFINITIONS
-       Colour palette:
-         white     — body panels, arm segments
-         blue      — joint spheres, gripper base
-         black     — wheels, face display
-         gray      — camera body
-         dark_blue — LiDAR
   ============================================================ -->
   <material name="white">
     <color rgba="0.95 0.95 0.95 1.0"/>
@@ -134,9 +128,7 @@
   </joint>
 
   <!-- ============================================================
-       FACE / DISPLAY PANEL  — black LED screen on the FRONT (+X) face
-       Torso front face is at X = +0.12 from torso origin.
-       Panel is 2 cm thick (X), spans torso width in Y, upper section.
+       FACE / DISPLAY PANEL  
   ============================================================ -->
   <link name="head_panel_link">
     <xacro:box_inertia m="0.6" x="0.02" y="0.20" z="0.16"/>
@@ -161,7 +153,7 @@
   </joint>
 
   <!-- ============================================================
-       CAMERA  — gray sensor block on front of torso
+       CAMERA 
   ============================================================ -->
   <link name="camera_link">
     <xacro:box_inertia m="0.25" x="0.05" y="0.05" z="0.04"/>
@@ -191,7 +183,7 @@
   </joint>
 
   <!-- ============================================================
-       LIDAR  — dark-blue cylinder on top of torso
+       LIDAR  
   ============================================================ -->
   <link name="lidar_link">
     <xacro:cylinder_inertia m="0.35" r="0.04" h="0.04"/>
@@ -214,11 +206,6 @@
 
   <!-- ============================================================
        RIGHT ARM  — 3-DOF active arm
-       Joint chain: shoulder (Z-rot) → elbow (Y-rot) → wrist (Y-rot)
-       Spring references enforce V-pose at rest:
-         shoulder ≈ 0 rad  (arm hangs at side, rotated forward slightly)
-         elbow    ≈ -1.5 rad (upper arm angled down)
-         wrist    ≈  0.8 rad (forearm angled back up → "V")
   ============================================================ -->
 
   <!-- Shoulder ball (blue) -->
@@ -334,11 +321,6 @@
 
   <!-- ============================================================
        FUNCTIONAL PARALLEL-JAW GRIPPER
-       The gripper base (blue) is fixed to the forearm tip.
-       Two fingers slide along Y (±) via prismatic joints:
-         open  = 0.05 m gap on each side
-         closed = 0.00 m (spring-held default)
-       Control via /arm_trajectory (trajectory_msgs/JointTrajectory).
   ============================================================ -->
 
   <!-- Gripper palm / base (blue) -->
@@ -482,11 +464,6 @@
 
   <!-- ============================================================
        GAZEBO: DRIVE PLUGIN
-       libgazebo_ros_skid_steer_drive.so does NOT ship with ROS2 Humble.
-       Two diff-drive instances are used instead — one per axle —
-       both subscribing to /cmd_vel for identical 4WD behaviour.
-       Only the FRONT plugin publishes /odom and the odom→base_footprint
-       TF to avoid duplicates.
   ============================================================ -->
 
   <!-- Front axle: publishes /odom + TF -->
@@ -594,7 +571,6 @@
 
   <!-- ============================================================
        GAZEBO: JOINT STATE PUBLISHER
-       Publishes live positions for all active joints incl. gripper.
   ============================================================ -->
   <gazebo>
     <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
@@ -617,8 +593,6 @@
 
   <!-- ============================================================
        GAZEBO: ARM + GRIPPER TRAJECTORY CONTROLLER
-       Send trajectory_msgs/JointTrajectory to /arm_trajectory to
-       command shoulder, elbow, wrist, and both gripper fingers.
   ============================================================ -->
   <gazebo>
     <plugin name="arm_trajectory_controller"
@@ -634,10 +608,6 @@
 
   <!-- ============================================================
        GAZEBO: V-POSE SPRING DAMPERS  (arm rests in V at startup)
-       shoulder → small forward tuck
-       elbow    → strong downward bend (-1.5 rad)
-       wrist    → wrist curls back (+0.8 rad) completing the V
-       fingers  → stay closed (springReference = 0)
   ============================================================ -->
 <gazebo reference="right_shoulder_joint">
   <implicitSpringDamper>true</implicitSpringDamper>
